@@ -6,4 +6,5 @@ services:
 install:
   - "pip install -r requirements.txt --use-mirrors"
   - "pip install pytest --use-mirrors"
-script: py.test cqlengine/tests/
+script:
+  - "py.test cqlengine/tests/"
