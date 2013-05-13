@@ -7,4 +7,5 @@ install:
   - "pip install -r requirements.txt --use-mirrors"
   - "pip install pytest --use-mirrors"
 script:
+  - while [ ! -f /var/run/cassandra.pid ] ; do sleep 1 ; done # wait until cassandra is ready
   - "py.test cqlengine/tests/"
